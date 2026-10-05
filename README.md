@@ -112,3 +112,41 @@ How do clinical costs, doctor workload, and patient wellness engagement relate t
 
 - Where should the network focus staffing, based on high-volume diagnoses and busy doctors?
 - Which patient groups should be targeted for wellness program expansion?
+
+## Key Insights
+
+### Findings
+
+1. **Overall scale.** The dashboard covers 2,671 visits from 1,649 patients, with $927,492 in total clinical cost. That is $347.25 per visit and $562.46 per patient, or about 1.6 visits per patient.
+
+2. **Three chronic conditions drive more than half of the cost.** Hypertension, Asthma, and Diabetes account for 1,220 of 2,671 visits (45.7%) but $514,428 of the total cost (55.5%). They average $418 to $430 per visit, versus $262 to $300 for the other five diagnoses.
+
+3. **Doctor workload is heavily concentrated.** The 4 General Practice doctors handle 1,451 visits (54.3%), about 363 visits each. The other 15 doctors with recorded visits average about 81 each. All 7 Neurology doctors have no recorded visits.
+
+4. **Patients with lower health scores cost much more.** Among patients with at least one visit, those with a health score of 40 to 59 average $798.86 in clinical cost and 1.93 visits. Patients scoring 75 to 95 average $288.78 and 1.27 visits, about 2.8 times less. Across all 1,649 patients, health score has a moderate negative correlation with cost (r = -0.41) and with visit frequency (r = -0.32). These are descriptive relationships, not proof of cause.
+
+5. **Outpatient visits are the most common, but checkups cost the most.** Outpatient makes up 1,285 visits (48.1%), Checkup 899 (33.7%), and Emergency 487 (18.2%). Checkups average $418.86 per visit, Outpatient $341.92, and Emergency only $229.09. Emergency being the cheapest is unexpected and worth reviewing.
+
+6. **Cost peaks in January, August, and April.** Monthly cost, with all years combined, is highest in January ($87,158), August ($85,679), and April ($82,589). It is lowest in November ($63,941) and July ($66,429).
+
+7. **Wellness engagement is steady and evenly spread.** There are 49,776 logged activities (about 15 per patient), averaging 67.5 minutes, with 40.3% rated Good, 50.2% Average, and 9.5% Poor. Volume is stable at about 2,000 to 2,250 activities per full month. Activity types (6,920 to 7,275 each) and cities (39.4% to 41.2% Good) look almost identical, so no single activity or city stands out.
+
+8. **Wellness status follows health score, not activity volume.** Patients with a health score below 60 (632 patients, 19.5% of all patients) have no Good activities, and about half of their activities are rated Poor. Patients scoring 60 or above have no Poor activities. How many activities a patient logs is unrelated to their health score (r = 0.01).
+
+9. **Health scores and patient mix are similar across groups.** The average health score is 73.7 overall. It ranges only from 73.1 to 74.2 by city and from 73.4 to 74.4 by insurance type. Half of patients have Public insurance (1,622), 25% have Private (810), and 25% have no insurance recorded (811).
+
+### Recommendations
+
+1. **Target the lowest health-score patients first.** The 632 patients with scores below 60 cost about 2.8 times more than the healthiest group and have no Good wellness activities. Expand the wellness program for this group first, then track whether their scores, visit counts, and costs improve.
+
+2. **Rebalance doctor capacity.** Add or redistribute General Practice capacity, since four doctors carry 54% of visits. Also check why the 7 Neurology doctors have no recorded visits: it may be a data gap or a scheduling and assignment issue.
+
+3. **Manage chronic conditions proactively.** Hypertension, Asthma, and Diabetes make up 55.5% of cost. Prevention and follow-up programs for these conditions have the biggest cost-saving potential.
+
+4. **Plan staffing and budget around seasonal peaks.** Check that the January, August, and April cost peaks repeat each year before scheduling extra capacity for those months.
+
+5. **Improve data quality at the source.** Fix the missing insurance values (25% of patients), the 269 zero-cost visits, the 47 duplicate visit rows, the 116 impossible ages, and the visit dates before 2020 (2,002 visits). Keep "Unknown" visible as an insurance category until it is corrected.
+
+### Data Notes
+
+These figures include the zero-cost visits, duplicate rows, and impossible ages listed above, because the dashboard includes them. Monthly cost patterns combine all years.
